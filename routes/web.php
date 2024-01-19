@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(["prefix"=>"Guarder","as"=>"Guarder."],function(){
+Route::group(["prefix"=>LaravelLocalization::setLocale()."/Guarder","as"=>"Guarder.",'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]],function(){
     Route::get('/', function () {
         return view("Guarder.index");
     })->name("index");

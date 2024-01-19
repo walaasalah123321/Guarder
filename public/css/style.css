@@ -188,10 +188,16 @@ body {
   padding: 0;
 }
 
-.custom_nav-container .navbar-nav {
+/* .custom_nav-container .navbar-nav {
   margin-left: auto;
+} */
+.custom_nav-container .ar {
+  margin-right: auto; 
 }
 
+.custom_nav-container .en {
+  margin-left: auto;
+}
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 0;
   padding: 35px 15px 10px 15px;
